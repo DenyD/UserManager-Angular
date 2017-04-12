@@ -1,0 +1,168 @@
+/****************************************
+                GENERAL
+****************************************/
+
+body {
+	font-family: 'Open Sans', sans-serif;
+  background-color: #d9f7ff;
+  color: #000;
+}
+
+.container {
+  height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+  margin-top: 150px;
+  text-align: center;
+  background-color: #0080ff;
+  line-height: 2em;
+}
+
+
+
+/****************************************
+                HEADING
+****************************************/
+
+header {
+  margin-top: 10px;
+  padding: 55px 0;
+  background-color: #0040ff;
+  border-bottom: 8px solid #0000ff;
+  margin-bottom: 90px;
+}
+
+#logo {
+  color: #fff;
+  float: left;
+  margin-left: 5%;
+  width: 45%;
+}
+
+h1 {
+	font-family: 'Changa One', sans-serif;
+	font-size: 4em;
+	font-weight: normal;
+  margin-top: -45px;
+}
+
+h3 {
+  margin-top: -10px;
+	font-size: 2em;
+	font-weight: normal;
+}
+
+
+
+/****************************************
+                NAVIGACJA
+****************************************/
+
+nav {
+  float: right;
+  font-size: 1.5em;
+  margin-right: 5%;
+  text-align: right;
+  width: 45%;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+}
+
+nav a {
+	font-weight: 800;
+	padding: 10px 15px;
+}
+
+nav a, nav a:visited {
+	color: #fff;
+}
+
+nav a.selected, nav a:hover {
+	color: #808080;
+  text-decoration: none;
+}
+
+/****************************************
+                INFO
+****************************************/
+
+.info {
+  margin: 20px 0 80px 0;
+  padding: 20px 0;
+  background-color: #0080ff;  
+  border: 3px solid transparent;
+  border-radius: 8px;
+}
+.all .btn,
+.online .btn {
+  background-color: #fff;
+  width: 30%;
+  float: left;
+  margin: -17px 5px;
+}
+.online .btn {
+  background-color: lightgreen;
+  float: right;
+}
+
+
+
+/****************************************
+                TABELA
+****************************************/
+table {
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px #888888;
+  margin-bottom: 30px;
+}
+.main {
+  width: 70%;
+  float: left;
+}
+
+#dane {
+  float: right;
+}
+
+.btn {
+  margin: 5px 0;
+  display: block;
+  width: 100%;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+textarea:focus, input:focus {
+    font-weight: bold;
+    color: #f00;
+    background-color: lightgreen
+}
+
+table th {
+  padding: 15px 20px;
+  text-align: center;
+}
+
+table td {
+  padding: 10px 5px;
+}
+
+td img {
+  width: 30px;
+  padding: 3px;
+}

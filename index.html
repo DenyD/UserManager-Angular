@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zarzadzanie uzytkownikami</title>
+  <link href="https://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400,400i,700,700i,800" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="angular.min.js"></script>
+</head>
+
+<body ng-controller="MainCtrl as vm">
+  <header>
+    <div id="logo">
+      <h1>FrimaIT</h1>
+      <h3>{{ vm.title }}</h3>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">FirmaIT</a></li>
+        <li><a href="index.html" class="selected">Uzytkownicy</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>	
+  <!-- Header End -->
+  <div class="container text-center">
+    <div class="info">
+      <div class="all">
+        <h4 class="btn">Wszystkich pracowników: {{ vm.liczbaUserow }}</h4>
+      </div>
+      <div class="online">
+        <h4 class="btn">Użytkowników ONline: 3</h4>
+      </div>    
+    </div>
+    <table class="main">
+      <thead>
+        <tr>
+          <th ng-repeat="nazwa in [
+          'NrID' , 'Imie' , 'Nazwisko' , 'E-mail' , 'Login' , 'Hasło' , 'Rola' , 'Status' , 'Edytuj' , 'Usun'
+          ]">
+          {{nazwa}}               
+          </th> 
+        </tr>      
+      </thead>	
+      <tbody>
+        <tr ng-repeat="user in vm.users">
+          <td>{{ $index + 1 }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.lastName }}</td>
+          <td>{{ user.mail }}</td>
+          <td>{{ user.login }}</td>
+          <td>{{ user.haslo }}</td>
+          <td>{{ user.rola }}</td>
+          <td><img ng-src="{{ user.status }}" /></td>
+          <td><img src="images/edit.png" ng-click="vm.editUser(user)"></img></td>
+          <td><img src="images/del.png" ng-click="vm.deleteUser($index)"></img></td>
+        </tr>        
+      </tbody>
+    </table>
+    	<!-- Table end -->
+    <div id="dane">
+      <input type="text" ng-model="vm.user.name" placeholder="Wpisz Imie">
+      <input type="text" ng-model="vm.user.lastName" placeholder="Wpisz Nazwisko">
+      <input type="text" ng-model="vm.user.mail" placeholder="Wpisz E-mail">
+      <input type="text" ng-model="vm.user.login" placeholder="Wpisz Login">
+      <input type="text" ng-model="vm.user.haslo" placeholder="Wpisz Hasło">
+      <input type="text" ng-model="vm.user.rola" placeholder="Wpisz Role">
+      <input type="text" ng-model="vm.user.status" placeholder="Wpisz status">
+      <button class="btn btn-primary" ng-click="vm.addUser()">Dodaj usera</button>
+      <button class="btn btn-primary" ng-click="vm.saveUser()">Zapisz</button>
+    </div>  
+  </div>
+  <!-- Container End -->
+  <footer>
+    <p>Daniel Siwczak, &copy; 2017</p>
+  </footer>
+  <!-- footer End-->
+  <script src="app.js"></script>
+</body>
+</html>
