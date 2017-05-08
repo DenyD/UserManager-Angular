@@ -125,6 +125,7 @@ table {
   border-radius: 15px;
   box-shadow: 5px 5px 20px #888888;
   margin-bottom: 30px;
+  background-color: #fff;
 }
 .main {
   width: 70%;
